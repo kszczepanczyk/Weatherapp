@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import {  Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { WeatherService } from './weather.service';
 import { DatePipe } from '@angular/common';
 
@@ -9,7 +9,7 @@ import { DatePipe } from '@angular/common';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private _weatherService: WeatherService,private _elementRef: ElementRef, private _renderer: Renderer2, private _datePipe: DatePipe){}
+  constructor(private _weatherService: WeatherService,private _elementRef: ElementRef, private _renderer: Renderer2){}
   isChanged:boolean = false;
   weatherData: any;
   imgUrl:string ="https://openweathermap.org/img/wn/";
