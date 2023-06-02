@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navbar {
+  height: 23vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-date {
+  width: 85%;
+  margin-bottom: 1rem;
+}
+.time {
+  font-weight: 700;
+  margin-right: 0.7em;
+}
+.navbar-input {
+  width: 85%;
+  display: flex;
+  align-items: flex-end;
+}
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.button-city {
+  background-color: white;
+  width: 60vw;
+  padding: 10px 10px 10px 40px;
+  border-radius: 22px;
+  border: 1px solid #0b7ddd;
+}
+.location-icon {
+  position: absolute;
+  left: 15px;
+  width: 1.2em;
+  height: 1.2em;
+}
+.toggle-container {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #5c5c5c;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #efcc00;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #efcc00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(28px);
+}
+.weather-info {
+  width: 100%;
+  height: 77vh;
+  background-color: #4babfc;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.temperature-container {
+  width: 65%;
+  padding-top: 4vh;
+  margin-bottom: 2.4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+.weather-icon {
+  width: 9em;
+  height: 9em;
+}
+.temperature {
+  padding: 1.2vh 0;
+  font-size: 4rem;
+}
+.description {
+  padding-bottom: 2.4vh;
+}
+.more-info-container {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #0b7ddd;
+  padding: 2.4vh 0;
+  border-radius: 10px;
+  box-shadow: 8px 8px 24px -6px rgba(11, 125, 221, 1);
+}
+.one-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-info-container-changed {
+  width: 85%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #07599c;
+  padding: 2.4vh 0;
+  border-radius: 10px;
+  box-shadow: 8px 8px 24px -6px #07599c;
+  .one-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    .data {
+      margin-left: auto;
+      margin-right: 15px;
+    }
+    .info-icon {
+      order: 2;
+      margin-left: 15px;
+    }
+    .small {
+      margin-left: 20px;
+    }
+  }
+}
+.enter-city {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 60vw;
+  height: 25vh;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.enter-city__text{
+    margin-bottom: 7%;
+}
+.dialog-input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 22px;
+    margin-bottom: 7%;
+    border:1px solid #07599c;
+}
+.dialog-close{
+    border-radius: 22px;
+    border:1px solid white;
+    background-color: #07599c;
+    color: white;
+    width: 30%;
+    padding: 8px;
+}
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+}
+.small {
+  margin: 5px 0;
+  width: 40px;
+  height: 40px;
+}
+
+.big-font {
+  font-size: 2rem;
+}
+.small-font {
+  font-size: 1.2rem;
+}
